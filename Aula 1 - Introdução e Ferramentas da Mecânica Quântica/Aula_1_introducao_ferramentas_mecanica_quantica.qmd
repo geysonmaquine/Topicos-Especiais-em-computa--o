@@ -1,0 +1,405 @@
+---
+title: Introdução à Mecânica Quântica e a Programação Quântica []{.universidade} []{.programa}
+subtitle: "**Disciplina:** Tópicos Especiais em Computação II"
+institute:
+    - Universidade Federal do Amazonas
+    - Pró-Reitoria de Pesquisa e Pós-Graduação
+    - Programa de Pós-Graduação em Informática
+
+author:
+    - "Profª: Dra. Rosiane de Freitas Rodrigues<br>[(rosiane@icomp.ufam.edu.br)](rosiane@icomp.ufam.edu.br)<br><br> Estágio em Docência II: Geyson Maquiné Batalha<br> [(geyson.batalha@icomp.ufam.edu.br)](geyson.batalha@icomp.ufam.edu.br)"
+
+lang: pt
+bibliography: ref.bib
+csl: abnt.csl
+format: 
+    revealjs:
+        slide-number: c/t
+        theme: [tema.scss]
+        width: 1600
+        height: 900
+        fig-cap-location: top
+        code-fold: true
+        margin: 0 
+
+---
+
+## Física Clássica X Física Quântica
+
+::: columns
+::: {.column style="font-size:30px; width=50%"}
+### Clássico
+
+-   Fenômenos Determinísticos
+
+-   Nível Atômico ou Macroscópico <br> ![](img/classical_quantum.jpg){width="400px" fig-align="center"}
+:::
+
+::: {.column style="font-size:30px; width=50%"}
+### Quântico
+
+-   Fenômenos Não-Determinísticos (Probabílisticos)
+-   Nivel Subatômico (Onda-Partícula)
+    -   Bósons (Ex: Fótons)
+    -   Férmions (Ex: Elétrons, Nêutrons)
+    - Anyons 
+![](img/sub.png){width="600px" fig-align="center"}
+:::
+:::
+
+## Contribuições Teóricas
+
+
+- Paul @Benioff_1980 descreve o primeiro modelo quântico da máquina de Turing.
+
+- Richard @Feynman_1982 descreve um modelo de processador universal capaz de simular sistemas quânticos.
+
+- David @deutsch1985 apresenta a ideia de um computador quântico universal, que seria capaz de simular qualquer processo físico, incluindo quântico e clássico.
+
+ - David Deutsch e Richard Jozsa  [-@jozsa1992]  apresentaram o primeiro algoritmo quântico exponencialmente mais rápido que seu análogo clássico.
+
+ - Peter Shor [-@Shor] apresentou um algoritmo quântico capaz de fatorar um número com muitos dígitos rapidamente.
+
+
+-  Lov Grover [-@Grover_1996]  desenvolveu um algoritmo de busca de dados não estruturados em uma velocidade maior que a desempenhada pelos algoritmos clássicos.
+
+::: {layout-ncol=6}
+![Paul Benioff (1930-2022)](img/benioff.jpeg){width=250px}
+
+![Richard Feynman (1918-1988)](img/feynman.jpg){width="190px"}
+
+![David Deutsch (1953-)](img/david.jpg){width="190px"}
+
+![Richard Jozsa (1953-)](img/jozsa.jpeg){width="220px"}
+
+![Peter Shor (1959-)](img/shor.jpg){width="250px"}
+
+![Lov Kumar Grover (1961-)](img/grover.jpg){width="250px"}
+
+:::
+
+
+## Contribuições Práticas
+
+- Jonathan A. Jones e Michele Mosca [-@Jones_1998] apresentaram o primeiro computador quântico com 2 Qubits. 
+
+- IBM
+
+## Hardware Quânticos
+
+
+
+## Fundamentos da Mecânica Quântica
+![](img/Fudanmentos_QM.svg){width="700px" fig-align=center}
+
+## Qubit
+
+![](img/qubit.svg){width="700px" fig-align=center}
+
+## Paralelismo Quântico
+
+
+## Workflow
+
+:::{layout="[[1,1], [1]]" style="text-align:center;font-size:25px;"}
+### Portas Lógicas
+![](img/digital_quantum.jpg){width="850px"}
+
+### Algoritmo Quântico de Otimização Aproximada (QAOA)
+![](img/quantum_annealer.png){width="800px"}
+
+
+Fonte: Fingerhuth, Babej e Wittek (2018).^[Fingerhuth, M.; Babej, T.; Wittek, P. Open Source Software in Quantum Computing. PLOS ONE 2018, 13 (12), e0208561. <https://doi.org/10.1371/journal.pone.0208561>.]
+:::
+
+## Framework
+
+
+:::{.panel-tabset}
+### Qiskit
+
+
+
+:::{.columns}
+:::{.column width=50%}
+![Link: <https://www.ibm.com/quantum/qiskit>](img/qiskit.png){width=1000px fig-align=center}
+
+
+- Instalação (Verifique se tem o python 3 e o pip instalados)
+
+```{.python .code-overflow-wrap style="font-size:35px;"}
+pip install qiskit-ibm-runtime # Permite o acesso das maquinas do IBM Q
+pip install qiskit[visualization] # instala todos pacotes necessarios
+```
+:::
+:::{.column style="font-size:30px; width=50%"}
+![](img/ibm.svg){height=500px fig-align=center}
+:::
+:::
+:::
+
+
+
+
+
+## IBM Quantum Platafom
+
+
+![](img/ibm_composer.png){width=1000px fig-align=center}
+
+
+
+## Chip Quântico
+
+
+::: {layout-ncol=2}
+![](img/QPU_Kyoto.png){width=750px fig-align=center}
+
+![](img/rede_qubit.png){width=750px fig-align=center}
+:::
+
+
+## Primeiro programa
+
+:::{.columns}
+:::{.column width=50%}
+```{.python .code-overflow-wrap style="font-size:35px;"}
+from qiskit import*
+
+# Criando os registradores  
+
+qubits = QuantumRegister(2)
+clbits = ClassicalRegister(2)
+# Criando o Quantum Circuit
+qc = QuantumCircuit(qubits, clbits)
+
+# Adiciona portas Hadamard 
+qc.h(qubits[0])  
+qc.h(qubits[1])
+
+# Medição
+qc.measure(qubits, clbits)
+
+%matplotlib inline 
+qc.draw('mpl')
+```
+![](img/hello_world.png){width=500px fig-align=center}
+:::
+:::{.column width=50%}
+```{.python .code-overflow-wrap style="font-size:25px;"}
+from qiskit import *
+from qiskit.visualization import plot_histogram, plot_distribution
+# circuito somente com as protas quanticas
+circuito1 = QuantumCircuit(2, 2) 
+circuito1.h(0)
+circuito1.h(1)
+circuito1.cx(0, 1)
+
+# circuto somente com as medicoes
+medicoes = QuantumCircuit(2, 2)
+medicoes.measure([0,1], [0,1]) # pode-se usar measure(range(2),range(2))
+
+simulador = BasicAer.get_backend('qasm_simulator') # executa o simulador 
+circuito_completo = circuito1.compose(medicoes)
+result = simulador.run(circuito_completo, shots=1000).result()
+counts  = result.get_counts(circuito_completo)
+
+
+# Executo pela segunda vez medindo 1024 vezes
+second_result = simulador.run(circuito_completo, shots=1024).result()
+second_counts  = second_result.get_counts(circuito_completo)
+```
+:::{.panel-tabset}
+### Contagens {.smaller}
+```{.python .code-overflow-wrap style="font-size:30px;"}
+legend = ['Primeira Execucao', 'Segunda Execucao']
+plot_histogram([counts, second_counts], legend=legend)
+```
+![](img/grafico_contagens.png){width=520px fig-align=center}
+
+### Probabilidade {.smaller}
+```{.python .code-overflow-wrap style="font-size:30px;"}
+legend = ['Primeira Execucao', 'Segunda Execucao']
+plot_distribution([counts, second_counts], legend=legend)
+```
+![](img/grafico_prob.png){width=520px fig-align=center}
+:::
+:::
+
+:::
+## Primeiro Programa
+:::{.columns}
+
+
+:::{.column width=50%}
+```{.python .code-overflow-wrap style="font-size:40px;"}
+from qiskit.visualization import  plot_bloch_multivector
+from qiskit.quantum_info import Statevector
+
+psi=Statevector(circuito1)
+
+plot_bloch_multivector(psi)
+```
+
+
+![](img/bloch.png){width=800px fig-align=center}
+:::
+:::{.column width=50%}
+:::{style="text-align: center;"}
+
+Link:<https://www.iqmacademy.com/play/bloch/>
+
+<iframe width="700" height="500" src="https://www.iqmacademy.com/curriculum/assets/bloch-viz/index.html?sliders"></iframe>
+
+:::
+:::
+
+:::
+
+## Portas Quânticas
+
+![](img/portas.svg){height=800px fig-align=center}
+
+## Exemplo: Estados de Bell
+
+:::{.columns}
+:::{.column with=50%}
+### Forma Geral
+$$|\beta_{xy}\rangle=\dfrac{|0y\rangle+(-1)^{x}|1\bar{y}\rangle}{\sqrt{2}}$$
+:::
+:::{.column with=50%}
+
+:::{style="font-size:30px; text-align:center;"}
+|Entrada|Saída|
+|:-------:|:-----:|
+| $$|00\rangle$$ | $$|\beta_{00}\rangle=\dfrac{|00\rangle+|11\rangle}{\sqrt{2}}$$
+| $$|01\rangle$$ | $$|\beta_{01}\rangle=\dfrac{|01\rangle+|10\rangle}{\sqrt{2}}$$|
+| $$|10\rangle$$|$$|\beta_{10}\rangle=\dfrac{|00\rangle-|11\rangle}{\sqrt{2}}$$|
+|$$|11\rangle$$|$$|\beta_{11}\rangle=\dfrac{|01\rangle-|10\rangle}{\sqrt{2}}$$|
+
+:::
+
+:::
+:::
+
+
+## Condicionais
+
+:::{.columns}
+:::{.column width=50%}
+### If-else
+```{.python .code-overflow-wrap style="font-size:35px;"}
+from qiskit import *
+
+qubits = QuantumRegister(2)
+clbits = ClassicalRegister(2)
+circuit = QuantumCircuit(qubits, clbits)
+(q0, q1) = qubits
+(c0, c1) = clbits
+ 
+circuit.h(q0)
+circuit.measure(q0, c0)
+with circuit.if_test((c0, 1)) as else_: # se a medida no primeiro qubit for 1
+    circuit.h(q1) # aplica-se a porta de hadamard no segundo qubit
+with else_: # caso contrário
+    circuit.x(q1) # aplica-se a porta de Pauli X
+circuit.measure(q1, c1)
+ 
+circuit.draw("mpl")
+```
+
+
+![](img/if_else.png){width=650px fig-align=center}
+
+:::
+
+:::{.column width=50%}
+### Case
+
+```{.python .code-overflow-wrap style="font-size:35px;"}
+from qiskit import *
+
+qubits = QuantumRegister(1)
+clbits = ClassicalRegister(1)
+circuit = QuantumCircuit(qubits, clbits)
+(q0,) = qubits
+(c0,) = clbits
+ 
+circuit.h(q0)
+circuit.measure(q0, c0)
+with circuit.switch(c0) as case: # seleciona as acoes no bit classico
+    with case(0): # caso 0
+        circuit.x(q0)
+    with case(1): # caso 1
+        circuit.z(q0)
+circuit.measure(q0, c0)
+circuit.draw("mpl")
+
+```
+![](img/case.png){width=800px fig-align=center}
+:::
+:::
+
+
+## Loops
+
+:::{.columns}
+:::{.column width=50%}
+### For
+
+```{.python .code-overflow-wrap style="font-size:40px;"}
+from qiskit import *
+
+qubits = QuantumRegister(1)
+clbits = ClassicalRegister(1)
+circuit = QuantumCircuit(qubits, clbits)
+(q0,) = qubits
+(c0,) = clbits
+ 
+with circuit.for_loop(range(5)) as _:
+    circuit.x(q0)
+circuit.measure(q0, c0)
+ 
+circuit.draw("mpl")
+
+```
+![](img/for.png){width=600px fig-align=center}
+:::
+
+:::{.column width=50%}
+
+### While
+
+```{.python .code-overflow-wrap style="font-size:30px;"}
+from qiskit import *
+
+qubits = QuantumRegister(2)
+clbits = ClassicalRegister(2)
+circuit = QuantumCircuit(qubits, clbits)
+ 
+q0, q1 = qubits
+c0, c1 = clbits
+ 
+circuit.h([q0, q1])
+circuit.measure(q0, c0)
+circuit.measure(q1, c1)
+# repete enquanto o resultado medidacao dos dois qubits forem 1
+with circuit.while_loop((clbits, 0b11)):
+    circuit.h([q0, q1])
+    circuit.measure(q0, c0)
+    circuit.measure(q1, c1)
+ 
+circuit.draw("mpl")
+
+```
+![](img/while.png){width=700px fig-align=center}
+:::
+:::
+---
+nocite: |
+  @Feynman_1982, @deutsch1985,@Fingerhuth_2018,@Understanding2023,@weaverQiskitPocketGuide2022,@rieffelQuantumComputingGentle2014,@nielsenQuantumComputationQuantum2000,@kayeIntroductionQuantumComputing2007,@IBM
+---
+## Referências
+::: {#refs style="margin:30px !important;"}
+:::
+
