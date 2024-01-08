@@ -20,7 +20,7 @@ format:
         height: 900
         fig-cap-location: top
         code-fold: true
-        margin: 0 
+        margin: 0
 
 ---
 
@@ -100,17 +100,35 @@ format:
 
 
 ## Workflow
+:::{.columns}
+:::{.column style="text-align:center; width=50%"}
+![](img/digital_quantum.jpg){width="800px"}
 
-:::{layout="[[1,1], [1]]" style="text-align:center;font-size:25px;"}
-### Portas Lógicas
-![](img/digital_quantum.jpg){width="850px"}
+Fonte: Fingerhuth, Babej e Wittek [-@Fingerhuth_2018].^[Fingerhuth, M.; Babej, T.; Wittek, P. Open Source Software in Quantum Computing. PLOS ONE 2018, 13 (12), e0208561. <https://doi.org/10.1371/journal.pone.0208561>.]
 
-### Algoritmo Quântico de Otimização Aproximada (QAOA)
-![](img/quantum_annealer.png){width="800px"}
-
-
-Fonte: Fingerhuth, Babej e Wittek (2018).^[Fingerhuth, M.; Babej, T.; Wittek, P. Open Source Software in Quantum Computing. PLOS ONE 2018, 13 (12), e0208561. <https://doi.org/10.1371/journal.pone.0208561>.]
 :::
+:::{.column style="text-align:center; width=50%"}
+```{mermaid}
+flowchart TD;
+    A[Algoritmos Quânticos]-->B[Criptografia];
+    A[Algoritmos Quânticos]-->C[Busca e Otimização];
+    B--> E[Algoritmo de Shor]
+    B-->F[Algoritmo de Simon]
+    C-->G[Algoritmo de Grover]
+    C-->H[QFT]
+    C-->I[VQE]
+    C-->J[QAOA]
+    C-->K[QW]
+
+```
+
+Fonte: Adaptado de @whurley_quantum_2023
+:::
+:::
+
+
+
+
 
 ## Framework
 
@@ -159,7 +177,7 @@ pip install qiskit[visualization] # instala todos pacotes necessarios
 :::
 
 
-## Primeiro programa
+## Primeiro Programa
 
 :::{.columns}
 :::{.column width=50%}
@@ -399,7 +417,11 @@ circuit.draw("mpl")
 nocite: |
   @Feynman_1982, @deutsch1985,@Fingerhuth_2018,@Understanding2023,@weaverQiskitPocketGuide2022,@rieffelQuantumComputingGentle2014,@nielsenQuantumComputationQuantum2000,@kayeIntroductionQuantumComputing2007,@IBM
 ---
+
 ## Referências
-::: {#refs style="margin:30px !important;"}
+
+::: {#refs style="margin-left:30px; margin-right:30px;"}
 :::
+
+
 
