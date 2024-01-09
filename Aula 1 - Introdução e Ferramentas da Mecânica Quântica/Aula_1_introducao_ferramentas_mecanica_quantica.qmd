@@ -64,13 +64,13 @@ format:
 -  Lov Grover [-@Grover_1996]  desenvolveu um algoritmo de busca de dados não estruturados em uma velocidade maior que a desempenhada pelos algoritmos clássicos.
 
 ::: {layout-ncol=6}
-![Paul Benioff (1930-2022)](img/benioff.jpeg){width=250px}
+![Paul Benioff (1930-2022)](img/benioff.jpeg){width=200px}
 
-![Richard Feynman (1918-1988)](img/feynman.jpg){width="190px"}
+![Richard Feynman (1918-1988)](img/feynman.jpg){width="130px"}
 
-![David Deutsch (1953-)](img/david.jpg){width="190px"}
+![David Deutsch (1953-)](img/david.jpg){width="130px"}
 
-![Richard Jozsa (1953-)](img/jozsa.jpeg){width="220px"}
+![Richard Jozsa (1953-)](img/jozsa.jpeg){width="150px"}
 
 ![Peter Shor (1959-)](img/shor.jpg){width="250px"}
 
@@ -96,35 +96,24 @@ format:
 
 ![](img/qubit.svg){width="700px" fig-align=center}
 
-## Paralelismo Quântico
+## Algoritmos Quânticos 
+
+:::{style="text-align:center;font-size:20px;"}
+
+![](img/digital_quantum.jpg){width="650px"}
+
+Fonte: Fingerhuth, Babej e Wittek 
+[-@Fingerhuth_2018].
 
 
-## Workflow
-:::{.columns}
-:::{.column style="text-align:center; width=50%"}
-![](img/digital_quantum.jpg){width="800px"}
 
-Fonte: Fingerhuth, Babej e Wittek [-@Fingerhuth_2018].^[Fingerhuth, M.; Babej, T.; Wittek, P. Open Source Software in Quantum Computing. PLOS ONE 2018, 13 (12), e0208561. <https://doi.org/10.1371/journal.pone.0208561>.]
+![](/img/algoritmo_quantico.jpg){width="900px" fig-align="center"}
 
+Fonte: Adaptado de @whurley_quantum_2023.^[QFT: Quantum Fourier transform; VQE: Variational quantum eigensolver; QAOA: Quantum approximate optimization
+algorithm; QW: Quantum Walks]
 :::
-:::{.column style="text-align:center; width=50%"}
-```{mermaid}
-flowchart TD;
-    A[Algoritmos Quânticos]-->B[Criptografia];
-    A[Algoritmos Quânticos]-->C[Busca e Otimização];
-    B--> E[Algoritmo de Shor]
-    B-->F[Algoritmo de Simon]
-    C-->G[Algoritmo de Grover]
-    C-->H[QFT]
-    C-->I[VQE]
-    C-->J[QAOA]
-    C-->K[QW]
 
-```
 
-Fonte: Adaptado de @whurley_quantum_2023
-:::
-:::
 
 
 
@@ -176,75 +165,9 @@ pip install qiskit[visualization] # instala todos pacotes necessarios
 ![](img/rede_qubit.png){width=750px fig-align=center}
 :::
 
-
-## Primeiro Programa
-
-:::{.columns}
-:::{.column width=50%}
-```{.python .code-overflow-wrap style="font-size:35px;"}
-from qiskit import*
-
-# Criando os registradores  
-
-qubits = QuantumRegister(2)
-clbits = ClassicalRegister(2)
-# Criando o Quantum Circuit
-qc = QuantumCircuit(qubits, clbits)
-
-# Adiciona portas Hadamard 
-qc.h(qubits[0])  
-qc.h(qubits[1])
-
-# Medição
-qc.measure(qubits, clbits)
-
-%matplotlib inline 
-qc.draw('mpl')
-```
-![](img/hello_world.png){width=500px fig-align=center}
-:::
-:::{.column width=50%}
-```{.python .code-overflow-wrap style="font-size:25px;"}
-from qiskit import *
-from qiskit.visualization import plot_histogram, plot_distribution
-# circuito somente com as protas quanticas
-circuito1 = QuantumCircuit(2, 2) 
-circuito1.h(0)
-circuito1.h(1)
-circuito1.cx(0, 1)
-
-# circuto somente com as medicoes
-medicoes = QuantumCircuit(2, 2)
-medicoes.measure([0,1], [0,1]) # pode-se usar measure(range(2),range(2))
-
-simulador = BasicAer.get_backend('qasm_simulator') # executa o simulador 
-circuito_completo = circuito1.compose(medicoes)
-result = simulador.run(circuito_completo, shots=1000).result()
-counts  = result.get_counts(circuito_completo)
+ 
 
 
-# Executo pela segunda vez medindo 1024 vezes
-second_result = simulador.run(circuito_completo, shots=1024).result()
-second_counts  = second_result.get_counts(circuito_completo)
-```
-:::{.panel-tabset}
-### Contagens {.smaller}
-```{.python .code-overflow-wrap style="font-size:30px;"}
-legend = ['Primeira Execucao', 'Segunda Execucao']
-plot_histogram([counts, second_counts], legend=legend)
-```
-![](img/grafico_contagens.png){width=520px fig-align=center}
-
-### Probabilidade {.smaller}
-```{.python .code-overflow-wrap style="font-size:30px;"}
-legend = ['Primeira Execucao', 'Segunda Execucao']
-plot_distribution([counts, second_counts], legend=legend)
-```
-![](img/grafico_prob.png){width=520px fig-align=center}
-:::
-:::
-
-:::
 ## Primeiro Programa
 :::{.columns}
 
@@ -278,6 +201,152 @@ Link:<https://www.iqmacademy.com/play/bloch/>
 
 ![](img/portas.svg){height=800px fig-align=center}
 
+
+## Exemplo: Superposição para 1 Qubit
+### Abordagem Algébrica
+
+- Incialmente, em  circuito quântico, cada qubit está no estado $|0\rangle$. Então, para nosso circuito, o estado final do qubit é $|\psi\rangle=|0\rangle$.
+
+- A aplicação da porta de Hadammard sobrepõe o estado incial. Lembrando que $H=\dfrac{1}{\sqrt{2}}\begin{pmatrix}1&1\\
+1&-1\end{pmatrix}$, então
+
+$$|\psi\rangle=H|0\rangle=\dfrac{1}{\sqrt{2}}\begin{pmatrix}1&1\\
+1&-1\end{pmatrix}\cdot\begin{pmatrix}1\\
+0\end{pmatrix}=\begin{pmatrix}\frac{1}{\sqrt{2}}\\
+\frac{1}{\sqrt{2}}\end{pmatrix} $$
+$$|\psi\rangle=\begin{pmatrix}\frac{1}{\sqrt{2}}\\
+0\end{pmatrix}+\begin{pmatrix}0\\
+\frac{1}{\sqrt{2}}\end{pmatrix} \rightarrow  \boxed{|\psi\rangle=\dfrac{1}{\sqrt{2}}(|0\rangle+|1\rangle)}$$
+
+- Também podemos determinar o mesmo estado final do qubit, utilizando os ângulos de rotação $\theta$ e $\varphi$  da esfera de Bloch. Então com a expressão $|\psi\rangle=\cos\left(\frac{\theta}{2}\right)|0\rangle+e^{\varphi i}\sin\left(\frac{\theta}{2}\right)|1\rangle$, o resultado é obtido quando $\theta=\frac{\pi}{2}$ e $\varphi=0$.
+
+- A probabilidade de obter o estado $|0\rangle$ será $P_0=|\langle 0|\psi\rangle|^2=\left|\frac{1}{\sqrt{2}}(\langle 0|0\rangle+\langle 0|1\rangle)\right|^2=0,5$
+
+- A probabilidade de obter o estado $|1\rangle$ será $P_1=|\langle 1|\psi\rangle|^2=0,5$.
+
+## Exemplo: Superposição para 1 Qubit
+### Implementação
+
+:::{.columns}
+:::{.column with=50%}
+```{.python .code-overflow-wrap style="font-size:35px;"}
+from qiskit import*
+
+# Criando os registradores  
+qubits = QuantumRegister(1)
+clbits = ClassicalRegister(1)
+
+# Criando o Circuito Quantico
+qc = QuantumCircuit(qubits, clbits)
+
+# Adiciona portas Hadamard 
+qc.h(qubits[0])  
+
+# Medição
+qc.measure(qubits, clbits)
+
+%matplotlib inline 
+qc.draw('mpl')
+```
+![](img/hada.png){width=300px fig-align=center}
+
+:::
+:::{.column with=50%}
+
+:::{.panel-tabset}
+### Medidas
+```{.python .code-overflow-wrap style="font-size:35px;"}
+# Determinar o backend a ser usado, que poder ser um simulador ou um chip real
+# Neste caso escolhemos o simulador qasm_simulator
+simulador = Aer.get_backend('qasm_simulator')
+n_medidas=8192 # número de medidas para estimativa de uma distribuição de probabilidades
+resultado=execute(qc,simulador,shots=n_medidas).result() # executa o circuito qc no backend escolhido e retorna o resultado
+```
+:::{.panel-tabset}
+#### Contagem
+```{.python .code-overflow-wrap style="font-size:35px;"}
+from qiskit.tools.visualization import plot_histogram
+contagem=resultado.get_counts(qc)
+plot_histogram(contagem)
+```
+
+![](img/count_had.png){width="470px" fig-align="center"}
+
+#### Probabilidade
+```{.python .code-overflow-wrap style="font-size:35px;"}
+from qiskit.tools.visualization import plot_distribution
+contagem=resultado.get_counts(qc)
+plot_distribution(contagem)
+```
+![](img/prob_had.png){width="470px" fig-align="center"}
+:::
+
+### Esfera de Bloch
+```{.python .code-overflow-wrap style="font-size:35px;"}
+from qiskit.visualization import plot_state_city, plot_bloch_multivector
+
+from qiskit.quantum_info import Statevector
+psi=Statevector(qc)
+
+plot_bloch_multivector(psi)
+
+```
+
+![](img/bloch_hada.png){width="470px" fig-align="center"}
+:::
+:::
+:::
+
+## Exemplo: Emaranhamento - Estados de Bell
+### Implementação
+:::{.columns}
+:::{.column width=50%}
+```{.python .code-overflow-wrap style="font-size:35px;"}
+from qiskit import *
+from qiskit.visualization import plot_histogram, plot_distribution
+# circuito somente com as protas quanticas
+circuito1 = QuantumCircuit(2, 2)
+circuito1.h(0)
+circuito1.cx(0, 1)
+
+# circuto somente com as medicoes
+medicoes = QuantumCircuit(2, 2)
+medicoes.measure([0,1], [0,1]) # pode-se usar measure(range(2),range(2))
+
+simulador = BasicAer.get_backend('qasm_simulator') # executa o simulador
+circuito_completo = circuito1.compose(medicoes)
+result = simulador.run(circuito_completo, shots=1000).result()
+counts  = result.get_counts(circuito_completo)
+
+# Executo pela segunda vez medindo 1024 vezes
+second_result = simulador.run(circuito_completo, shots=1024).result()
+second_counts  = second_result.get_counts(circuito_completo)
+```
+![](img/bell00.png){width=400px fig-align=center}
+:::
+:::{.column width=50%}
+
+:::{.panel-tabset}
+### Medições
+:::{.panel-tabset}
+#### Contagens
+```{.python .code-overflow-wrap style="font-size:30px;"}
+legend = ['Primeira Execucao', 'Segunda Execucao']
+plot_histogram([counts, second_counts], legend=legend)
+```
+![](img/grafico_contagens.png){width=600px fig-align=center}
+
+#### Probabilidade 
+```{.python .code-overflow-wrap style="font-size:30px;"}
+legend = ['Primeira Execucao', 'Segunda Execucao']
+plot_distribution([counts, second_counts], legend=legend)
+```
+![](img/grafico_prob.png){width=600px fig-align=center}
+:::
+### Esfera de Bloch
+:::
+:::
+:::
 ## Exemplo: Estados de Bell
 
 :::{.columns}
