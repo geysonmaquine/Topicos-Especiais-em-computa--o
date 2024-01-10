@@ -81,9 +81,29 @@ format:
 
 ## Contribuições Práticas
 
-- Jonathan A. Jones e Michele Mosca [-@Jones_1998] apresentaram o primeiro computador quântico com 2 Qubits. 
+- Jonathan A. Jones e Michele Mosca [-@Jones_1998] apresentaram o primeiro computador quântico com 2 qubits. 
 
-- IBM
+- D-Wave ([2011](https://thequantuminsider.com/2022/07/01/d-wave-quantum-computer/)) apresenta o primeiro computador quântico adiabático (D-Wave One) com 128 qubits.
+
+- IBM ([2016](https://www.businessinsider.com/ibm-launches-first-quantum-computer-cloud-service-2016-5)) libera o acesso público de 5 qubits do seu computador quântico pela plataforma IBM Quantum Experience. 
+- Intel ([2018](https://spectrum.ieee.org/intels-49qubit-chip-aims-for-quantum-supremacy)) anuncia o chip quântico Tangle Lake com 49 qubits. Google ([2018](https://blog.research.google/2018/03/a-preview-of-bristlecone-googles-new.html?m=1)) apresenta seu processador Bristlecone com 72 qubits.
+
+- Google ([2019](https://www.inovacaotecnologica.com.br/noticias/noticia.php?artigo=google-afirma-ter-atingido-supremacia-quantica-ibm-contesta&id=010150191023)) afirma ter coneguido atingir a supremacia quântica por ter coseguido resolver um problema que levaria 10000 anos no computador clássico em 200 segundos  utilizando seu processador Sycamore de 54 qubits. Porém, pesquisadores ([2021]( https://arxiv.org/abs/2111.03011
+)) conseguiram resolver o mesmo problema em 15 horas, reformulando o algoritmo como uma rede tensorial 3D e executado-o em um supercomputador de 512 GPUs.
+
+- Atom Computing ([2023](https://atom-computing.com/quantum-startup-atom-computing-first-to-exceed-1000-qubits/)) anuncia processador quântico com 1125 qubits. Em seguida, a IBM ([2023](https://www.ibm.com/quantum/blog/quantum-roadmap-2033)) lança seu processador Condor com 1121 qubits e Heron com 133 qubits (taxa de erros menor).
+
+
+::: {layout-ncol=4}
+![D-Wave One](img/dwave.webp){width="450px" fig-align="center"}
+
+![Intel Tangle Lake](img/intel-tangle-lake.jpg){width="250px" fig-align="center"}
+
+![Google Sycamore](img/google_sys.jpg){width="350px" fig-align="center"}
+
+
+![IBM Condor e Heron](img/ibm_condor_heron.webp){width="350px" fig-align="center"}
+:::
 
 ## Hardware Quânticos
 
