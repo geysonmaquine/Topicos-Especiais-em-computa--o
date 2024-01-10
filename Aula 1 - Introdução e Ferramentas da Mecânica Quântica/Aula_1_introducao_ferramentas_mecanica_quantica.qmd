@@ -107,7 +107,7 @@ Fonte: Fingerhuth, Babej e Wittek
 
 
 
-![](/img/algoritmo_quantico.jpg){width="900px" fig-align="center"}
+![](img/algoritmo_quantico.jpg){width="900px" fig-align="center"}
 
 Fonte: Adaptado de @whurley_quantum_2023.^[QFT: Quantum Fourier transform; VQE: Variational quantum eigensolver; QAOA: Quantum approximate optimization
 algorithm; QW: Quantum Walks]
@@ -127,8 +127,7 @@ algorithm; QW: Quantum Walks]
 
 
 
-:::{.columns}
-:::{.column width=50%}
+
 ![Link: <https://www.ibm.com/quantum/qiskit>](img/qiskit.png){width=1000px fig-align=center}
 
 
@@ -139,11 +138,7 @@ pip install qiskit-ibm-runtime # Permite o acesso das maquinas do IBM Q
 pip install qiskit[visualization] # instala todos pacotes necessarios
 ```
 :::
-:::{.column style="font-size:30px; width=50%"}
-![](img/ibm.svg){height=500px fig-align=center}
-:::
-:::
-:::
+
 
 
 
@@ -165,38 +160,6 @@ pip install qiskit[visualization] # instala todos pacotes necessarios
 ![](img/rede_qubit.png){width=750px fig-align=center}
 :::
 
- 
-
-
-## Primeiro Programa
-:::{.columns}
-
-
-:::{.column width=50%}
-```{.python .code-overflow-wrap style="font-size:40px;"}
-from qiskit.visualization import  plot_bloch_multivector
-from qiskit.quantum_info import Statevector
-
-psi=Statevector(circuito1)
-
-plot_bloch_multivector(psi)
-```
-
-
-![](img/bloch.png){width=800px fig-align=center}
-:::
-:::{.column width=50%}
-:::{style="text-align: center;"}
-
-Link:<https://www.iqmacademy.com/play/bloch/>
-
-<iframe width="700" height="500" src="https://www.iqmacademy.com/curriculum/assets/bloch-viz/index.html?sliders"></iframe>
-
-:::
-:::
-
-:::
-
 ## Portas Quânticas
 
 ![](img/portas.svg){height=800px fig-align=center}
@@ -205,20 +168,19 @@ Link:<https://www.iqmacademy.com/play/bloch/>
 ## Exemplo: Superposição para 1 Qubit
 ### Abordagem Algébrica
 
-- Incialmente, em  circuito quântico, cada qubit está no estado $|0\rangle$. Então, para nosso circuito, o estado final do qubit é $|\psi\rangle=|0\rangle$.
+- Incialmente, em  circuito quântico, cada qubit está no estado $|0\rangle$. Então, para nosso circuito, o estado final do qubit é $|\psi\rangle =|0\rangle$.
 
-- A aplicação da porta de Hadammard sobrepõe o estado incial. Lembrando que $H=\dfrac{1}{\sqrt{2}}\begin{pmatrix}1&1\\
-1&-1\end{pmatrix}$, então
+- A aplicação da porta de Hadammard sobrepõe o estado incial. Lembrando que $H=\dfrac{1}{\sqrt{2}}\begin{pmatrix}1&1\\1&-1\end{pmatrix}$, então
 
-$$|\psi\rangle=H|0\rangle=\dfrac{1}{\sqrt{2}}\begin{pmatrix}1&1\\
+$$|\psi\rangle =H|0\rangle =\dfrac{1}{\sqrt{2}}\begin{pmatrix}1&1\\
 1&-1\end{pmatrix}\cdot\begin{pmatrix}1\\
 0\end{pmatrix}=\begin{pmatrix}\frac{1}{\sqrt{2}}\\
 \frac{1}{\sqrt{2}}\end{pmatrix} $$
-$$|\psi\rangle=\begin{pmatrix}\frac{1}{\sqrt{2}}\\
+$$|\psi\rangle =\begin{pmatrix}\frac{1}{\sqrt{2}}\\
 0\end{pmatrix}+\begin{pmatrix}0\\
-\frac{1}{\sqrt{2}}\end{pmatrix} \rightarrow  \boxed{|\psi\rangle=\dfrac{1}{\sqrt{2}}(|0\rangle+|1\rangle)}$$
+\frac{1}{\sqrt{2}}\end{pmatrix} \rightarrow  \boxed{|\psi\rangle =\dfrac{1}{\sqrt{2}}(|0\rangle +|1\rangle)}$$
 
-- Também podemos determinar o mesmo estado final do qubit, utilizando os ângulos de rotação $\theta$ e $\varphi$  da esfera de Bloch. Então com a expressão $|\psi\rangle=\cos\left(\frac{\theta}{2}\right)|0\rangle+e^{\varphi i}\sin\left(\frac{\theta}{2}\right)|1\rangle$, o resultado é obtido quando $\theta=\frac{\pi}{2}$ e $\varphi=0$.
+- Também podemos determinar o mesmo estado final do qubit, utilizando os ângulos de rotação $\theta$ e $\varphi$  da esfera de Bloch. Então com a expressão $|\psi\rangle =\cos\left(\frac{\theta}{2}\right)|0\rangle +e^{\varphi i}\sin\left(\frac{\theta}{2}\right)|1\rangle$, o resultado é obtido quando $\theta =\frac{\pi}{2}$ e $\varphi =0$.
 
 - A probabilidade de obter o estado $|0\rangle$ será $P_0=|\langle 0|\psi\rangle|^2=\left|\frac{1}{\sqrt{2}}(\langle 0|0\rangle+\langle 0|1\rangle)\right|^2=0,5$
 
@@ -298,6 +260,24 @@ plot_bloch_multivector(psi)
 :::
 
 ## Exemplo: Emaranhamento - Estados de Bell
+### Abordagem Algébrica
+- Para $x,y \in \{0,1\}$
+
+|Entrada|Saída|
+|:-------:|:-----:|
+| $|xy\rangle$ | $\scriptsize |\beta_{xy}\rangle=\dfrac{|0y\rangle+(-1)^{x}|1\bar{y}\rangle}{\sqrt{2}}$
+| 
+
+- Para emaranhar estados utiliza-se a porta CNOT. Assim, para  entrada $|00\rangle=|0\rangle\otimes|0\rangle$,  o primeiro qubit será o de controle. Para ativar a porta X devemos aplicar a porta H no primeiro qubit,
+
+$$\scriptsize H|00\rangle=\dfrac{1}{\sqrt{2}}\begin{pmatrix}1\\1\end{pmatrix}\otimes\begin{pmatrix}1\\0\end{pmatrix}=\dfrac{1}{\sqrt{2}}\begin{pmatrix}1(1)\\1(0)\\1(1)\\1(0)\end{pmatrix}=\dfrac{1}{\sqrt{2}}\begin{pmatrix}1\\0\\1\\0\end{pmatrix}$$
+
+- Aplicando a porta CNOT
+
+$$\scriptsize |\beta_{00}\rangle=CNOT(H|00\rangle)=\begin{pmatrix}1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 0 & 1 \\ 0 & 0 & 1 & 0 \end{pmatrix}\dfrac{1}{\sqrt{2}}\begin{pmatrix}1\\0\\1\\0\end{pmatrix} =\dfrac{1}{\sqrt{2}}\left[\begin{pmatrix}1\\0\\0\\0\end{pmatrix}+\begin{pmatrix}0\\0\\0\\1\end{pmatrix}\right]\rightarrow\boxed{|\beta_{00}\rangle=\dfrac{1}{\sqrt{2}}(|00\rangle+|11\rangle)}$$
+
+
+## Exemplo: Emaranhamento - Estados de Bell
 ### Implementação
 :::{.columns}
 :::{.column width=50%}
@@ -344,28 +324,16 @@ plot_distribution([counts, second_counts], legend=legend)
 ![](img/grafico_prob.png){width=600px fig-align=center}
 :::
 ### Esfera de Bloch
-:::
-:::
-:::
-## Exemplo: Estados de Bell
+```{.python .code-overflow-wrap style="font-size:30px;"}
+from qiskit.quantum_info import Statevector
+from qiskit.visualization import plot_state_qsphere
 
-:::{.columns}
-:::{.column with=50%}
-### Forma Geral
-$$|\beta_{xy}\rangle=\dfrac{|0y\rangle+(-1)^{x}|1\bar{y}\rangle}{\sqrt{2}}$$
+state = Statevector(circuito1)
+plot_state_qsphere(state)
+```
+
+![](img/bloch_bell.png){width=500px fig-align=center}
 :::
-:::{.column with=50%}
-
-:::{style="font-size:30px; text-align:center;"}
-|Entrada|Saída|
-|:-------:|:-----:|
-| $$|00\rangle$$ | $$|\beta_{00}\rangle=\dfrac{|00\rangle+|11\rangle}{\sqrt{2}}$$
-| $$|01\rangle$$ | $$|\beta_{01}\rangle=\dfrac{|01\rangle+|10\rangle}{\sqrt{2}}$$|
-| $$|10\rangle$$|$$|\beta_{10}\rangle=\dfrac{|00\rangle-|11\rangle}{\sqrt{2}}$$|
-|$$|11\rangle$$|$$|\beta_{11}\rangle=\dfrac{|01\rangle-|10\rangle}{\sqrt{2}}$$|
-
-:::
-
 :::
 :::
 

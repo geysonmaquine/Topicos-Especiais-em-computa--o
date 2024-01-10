@@ -543,7 +543,7 @@ Profª: Dra. Rosiane de Freitas Rodrigues<br><a href="rosiane@icomp.ufam.edu.br"
 <p>Fonte: Fingerhuth, Babej e Wittek <span class="citation" data-cites="Fingerhuth_2018">(<a href="#/referências" role="doc-biblioref" onclick="">2018</a>)</span>.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="/img/algoritmo_quantico.jpg" class="quarto-figure quarto-figure-center" width="900"></p>
+<p><img data-src="img/algoritmo_quantico.jpg" class="quarto-figure quarto-figure-center" width="900"></p>
 </figure>
 </div>
 <p>Fonte: Adaptado de <span class="citation" data-cites="whurley_quantum_2023">WHURLEY; SMITH (<a href="#/referências" role="doc-biblioref" onclick="">2023</a>)</span>.<sup>1</sup></p>
@@ -555,8 +555,6 @@ Profª: Dra. Rosiane de Freitas Rodrigues<br><a href="rosiane@icomp.ufam.edu.br"
 <ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">Qiskit</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1">
-<div class="columns">
-<div class="column" style="width:50%;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <figcaption>Link: <a href="https://www.ibm.com/quantum/qiskit" class="uri">https://www.ibm.com/quantum/qiskit</a></figcaption>
@@ -568,14 +566,6 @@ Profª: Dra. Rosiane de Freitas Rodrigues<br><a href="rosiane@icomp.ufam.edu.br"
 </ul>
 <div class="sourceCode" id="cb1" style="font-size:35px;"><pre class="sourceCode numberSource python code-overflow-wrap number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href=""></a>pip install qiskit<span class="op">-</span>ibm<span class="op">-</span>runtime <span class="co"># Permite o acesso das maquinas do IBM Q</span></span>
 <span id="cb1-2"><a href=""></a>pip install qiskit[visualization] <span class="co"># instala todos pacotes necessarios</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div><div class="column" style="font-size:30px; width=50%">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="img/ibm.svg" class="quarto-figure quarto-figure-center" height="500"></p>
-</figure>
-</div>
-</div>
-</div>
 </div>
 </div>
 </div>
@@ -605,30 +595,6 @@ Profª: Dra. Rosiane de Freitas Rodrigues<br><a href="rosiane@icomp.ufam.edu.br"
 </div>
 </div>
 </section>
-<section id="primeiro-programa" class="slide level2">
-<h2>Primeiro Programa</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<div class="sourceCode" id="cb2" style="font-size:40px;"><pre class="sourceCode numberSource python code-overflow-wrap number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href=""></a><span class="im">from</span> qiskit.visualization <span class="im">import</span>  plot_bloch_multivector</span>
-<span id="cb2-2"><a href=""></a><span class="im">from</span> qiskit.quantum_info <span class="im">import</span> Statevector</span>
-<span id="cb2-3"><a href=""></a></span>
-<span id="cb2-4"><a href=""></a>psi<span class="op">=</span>Statevector(circuito1)</span>
-<span id="cb2-5"><a href=""></a></span>
-<span id="cb2-6"><a href=""></a>plot_bloch_multivector(psi)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="img/bloch.png" class="quarto-figure quarto-figure-center" width="800"></p>
-</figure>
-</div>
-</div><div class="column" style="width:50%;">
-<div style="text-align: center;">
-<p>Link:<a href="https://www.iqmacademy.com/play/bloch/" class="uri">https://www.iqmacademy.com/play/bloch/</a></p>
-<iframe width="700" height="500" src="https://www.iqmacademy.com/curriculum/assets/bloch-viz/index.html?sliders">
-</iframe>
-</div>
-</div>
-</div>
-</section>
 <section id="portas-quânticas" class="slide level2">
 <h2>Portas Quânticas</h2>
 <div class="quarto-figure quarto-figure-center">
@@ -641,18 +607,17 @@ Profª: Dra. Rosiane de Freitas Rodrigues<br><a href="rosiane@icomp.ufam.edu.br"
 <h2>Exemplo: Superposição para 1 Qubit</h2>
 <h3 id="abordagem-algébrica">Abordagem Algébrica</h3>
 <ul>
-<li><p>Incialmente, em circuito quântico, cada qubit está no estado <span class="math inline">\(|0\rangle\)</span>. Então, para nosso circuito, o estado final do qubit é <span class="math inline">\(|\psi\rangle=|0\rangle\)</span>.</p></li>
-<li><p>A aplicação da porta de Hadammard sobrepõe o estado incial. Lembrando que <span class="math inline">\(H=\dfrac{1}{\sqrt{2}}\begin{pmatrix}1&amp;1\\
-1&amp;-1\end{pmatrix}\)</span>, então</p></li>
+<li><p>Incialmente, em circuito quântico, cada qubit está no estado <span class="math inline">\(|0\rangle\)</span>. Então, para nosso circuito, o estado final do qubit é <span class="math inline">\(|\psi\rangle =|0\rangle\)</span>.</p></li>
+<li><p>A aplicação da porta de Hadammard sobrepõe o estado incial. Lembrando que <span class="math inline">\(H=\dfrac{1}{\sqrt{2}}\begin{pmatrix}1&amp;1\\1&amp;-1\end{pmatrix}\)</span>, então</p></li>
 </ul>
-<p><span class="math display">\[|\psi\rangle=H|0\rangle=\dfrac{1}{\sqrt{2}}\begin{pmatrix}1&amp;1\\
+<p><span class="math display">\[|\psi\rangle =H|0\rangle =\dfrac{1}{\sqrt{2}}\begin{pmatrix}1&amp;1\\
 1&amp;-1\end{pmatrix}\cdot\begin{pmatrix}1\\
 0\end{pmatrix}=\begin{pmatrix}\frac{1}{\sqrt{2}}\\
-\frac{1}{\sqrt{2}}\end{pmatrix} \]</span> <span class="math display">\[|\psi\rangle=\begin{pmatrix}\frac{1}{\sqrt{2}}\\
+\frac{1}{\sqrt{2}}\end{pmatrix} \]</span> <span class="math display">\[|\psi\rangle =\begin{pmatrix}\frac{1}{\sqrt{2}}\\
 0\end{pmatrix}+\begin{pmatrix}0\\
-\frac{1}{\sqrt{2}}\end{pmatrix} \rightarrow  \boxed{|\psi\rangle=\dfrac{1}{\sqrt{2}}(|0\rangle+|1\rangle)}\]</span></p>
+\frac{1}{\sqrt{2}}\end{pmatrix} \rightarrow  \boxed{|\psi\rangle =\dfrac{1}{\sqrt{2}}(|0\rangle +|1\rangle)}\]</span></p>
 <ul>
-<li><p>Também podemos determinar o mesmo estado final do qubit, utilizando os ângulos de rotação <span class="math inline">\(\theta\)</span> e <span class="math inline">\(\varphi\)</span> da esfera de Bloch. Então com a expressão <span class="math inline">\(|\psi\rangle=\cos\left(\frac{\theta}{2}\right)|0\rangle+e^{\varphi i}\sin\left(\frac{\theta}{2}\right)|1\rangle\)</span>, o resultado é obtido quando <span class="math inline">\(\theta=\frac{\pi}{2}\)</span> e <span class="math inline">\(\varphi=0\)</span>.</p></li>
+<li><p>Também podemos determinar o mesmo estado final do qubit, utilizando os ângulos de rotação <span class="math inline">\(\theta\)</span> e <span class="math inline">\(\varphi\)</span> da esfera de Bloch. Então com a expressão <span class="math inline">\(|\psi\rangle =\cos\left(\frac{\theta}{2}\right)|0\rangle +e^{\varphi i}\sin\left(\frac{\theta}{2}\right)|1\rangle\)</span>, o resultado é obtido quando <span class="math inline">\(\theta =\frac{\pi}{2}\)</span> e <span class="math inline">\(\varphi =0\)</span>.</p></li>
 <li><p>A probabilidade de obter o estado <span class="math inline">\(|0\rangle\)</span> será <span class="math inline">\(P_0=|\langle 0|\psi\rangle|^2=\left|\frac{1}{\sqrt{2}}(\langle 0|0\rangle+\langle 0|1\rangle)\right|^2=0,5\)</span></p></li>
 <li><p>A probabilidade de obter o estado <span class="math inline">\(|1\rangle\)</span> será <span class="math inline">\(P_1=|\langle 1|\psi\rangle|^2=0,5\)</span>.</p></li>
 </ul>
@@ -662,23 +627,23 @@ Profª: Dra. Rosiane de Freitas Rodrigues<br><a href="rosiane@icomp.ufam.edu.br"
 <h3 id="implementação">Implementação</h3>
 <div class="columns">
 <div class="column" data-with="50%">
-<div class="sourceCode" id="cb3" style="font-size:35px;"><pre class="sourceCode numberSource python code-overflow-wrap number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href=""></a><span class="im">from</span> qiskit <span class="im">import</span><span class="op">*</span></span>
-<span id="cb3-2"><a href=""></a></span>
-<span id="cb3-3"><a href=""></a><span class="co"># Criando os registradores  </span></span>
-<span id="cb3-4"><a href=""></a>qubits <span class="op">=</span> QuantumRegister(<span class="dv">1</span>)</span>
-<span id="cb3-5"><a href=""></a>clbits <span class="op">=</span> ClassicalRegister(<span class="dv">1</span>)</span>
-<span id="cb3-6"><a href=""></a></span>
-<span id="cb3-7"><a href=""></a><span class="co"># Criando o Circuito Quantico</span></span>
-<span id="cb3-8"><a href=""></a>qc <span class="op">=</span> QuantumCircuit(qubits, clbits)</span>
-<span id="cb3-9"><a href=""></a></span>
-<span id="cb3-10"><a href=""></a><span class="co"># Adiciona portas Hadamard </span></span>
-<span id="cb3-11"><a href=""></a>qc.h(qubits[<span class="dv">0</span>])  </span>
-<span id="cb3-12"><a href=""></a></span>
-<span id="cb3-13"><a href=""></a><span class="co"># Medição</span></span>
-<span id="cb3-14"><a href=""></a>qc.measure(qubits, clbits)</span>
-<span id="cb3-15"><a href=""></a></span>
-<span id="cb3-16"><a href=""></a><span class="op">%</span>matplotlib inline </span>
-<span id="cb3-17"><a href=""></a>qc.draw(<span class="st">'mpl'</span>)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb2" style="font-size:35px;"><pre class="sourceCode numberSource python code-overflow-wrap number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href=""></a><span class="im">from</span> qiskit <span class="im">import</span><span class="op">*</span></span>
+<span id="cb2-2"><a href=""></a></span>
+<span id="cb2-3"><a href=""></a><span class="co"># Criando os registradores  </span></span>
+<span id="cb2-4"><a href=""></a>qubits <span class="op">=</span> QuantumRegister(<span class="dv">1</span>)</span>
+<span id="cb2-5"><a href=""></a>clbits <span class="op">=</span> ClassicalRegister(<span class="dv">1</span>)</span>
+<span id="cb2-6"><a href=""></a></span>
+<span id="cb2-7"><a href=""></a><span class="co"># Criando o Circuito Quantico</span></span>
+<span id="cb2-8"><a href=""></a>qc <span class="op">=</span> QuantumCircuit(qubits, clbits)</span>
+<span id="cb2-9"><a href=""></a></span>
+<span id="cb2-10"><a href=""></a><span class="co"># Adiciona portas Hadamard </span></span>
+<span id="cb2-11"><a href=""></a>qc.h(qubits[<span class="dv">0</span>])  </span>
+<span id="cb2-12"><a href=""></a></span>
+<span id="cb2-13"><a href=""></a><span class="co"># Medição</span></span>
+<span id="cb2-14"><a href=""></a>qc.measure(qubits, clbits)</span>
+<span id="cb2-15"><a href=""></a></span>
+<span id="cb2-16"><a href=""></a><span class="op">%</span>matplotlib inline </span>
+<span id="cb2-17"><a href=""></a>qc.draw(<span class="st">'mpl'</span>)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="img/hada.png" class="quarto-figure quarto-figure-center" width="300"></p>
@@ -689,18 +654,18 @@ Profª: Dra. Rosiane de Freitas Rodrigues<br><a href="rosiane@icomp.ufam.edu.br"
 <ul id="tabset-3" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-3-1">Medidas</a></li><li><a href="#tabset-3-2">Esfera de Bloch</a></li></ul>
 <div class="tab-content">
 <div id="tabset-3-1">
-<div class="sourceCode" id="cb4" style="font-size:35px;"><pre class="sourceCode numberSource python code-overflow-wrap number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href=""></a><span class="co"># Determinar o backend a ser usado, que poder ser um simulador ou um chip real</span></span>
-<span id="cb4-2"><a href=""></a><span class="co"># Neste caso escolhemos o simulador qasm_simulator</span></span>
-<span id="cb4-3"><a href=""></a>simulador <span class="op">=</span> Aer.get_backend(<span class="st">'qasm_simulator'</span>)</span>
-<span id="cb4-4"><a href=""></a>n_medidas<span class="op">=</span><span class="dv">8192</span> <span class="co"># número de medidas para estimativa de uma distribuição de probabilidades</span></span>
-<span id="cb4-5"><a href=""></a>resultado<span class="op">=</span>execute(qc,simulador,shots<span class="op">=</span>n_medidas).result() <span class="co"># executa o circuito qc no backend escolhido e retorna o resultado</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb3" style="font-size:35px;"><pre class="sourceCode numberSource python code-overflow-wrap number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href=""></a><span class="co"># Determinar o backend a ser usado, que poder ser um simulador ou um chip real</span></span>
+<span id="cb3-2"><a href=""></a><span class="co"># Neste caso escolhemos o simulador qasm_simulator</span></span>
+<span id="cb3-3"><a href=""></a>simulador <span class="op">=</span> Aer.get_backend(<span class="st">'qasm_simulator'</span>)</span>
+<span id="cb3-4"><a href=""></a>n_medidas<span class="op">=</span><span class="dv">8192</span> <span class="co"># número de medidas para estimativa de uma distribuição de probabilidades</span></span>
+<span id="cb3-5"><a href=""></a>resultado<span class="op">=</span>execute(qc,simulador,shots<span class="op">=</span>n_medidas).result() <span class="co"># executa o circuito qc no backend escolhido e retorna o resultado</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="panel-tabset">
 <ul id="tabset-2" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-2-1">Contagem</a></li><li><a href="#tabset-2-2">Probabilidade</a></li></ul>
 <div class="tab-content">
 <div id="tabset-2-1">
-<div class="sourceCode" id="cb5" style="font-size:35px;"><pre class="sourceCode numberSource python code-overflow-wrap number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href=""></a><span class="im">from</span> qiskit.tools.visualization <span class="im">import</span> plot_histogram</span>
-<span id="cb5-2"><a href=""></a>contagem<span class="op">=</span>resultado.get_counts(qc)</span>
-<span id="cb5-3"><a href=""></a>plot_histogram(contagem)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb4" style="font-size:35px;"><pre class="sourceCode numberSource python code-overflow-wrap number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href=""></a><span class="im">from</span> qiskit.tools.visualization <span class="im">import</span> plot_histogram</span>
+<span id="cb4-2"><a href=""></a>contagem<span class="op">=</span>resultado.get_counts(qc)</span>
+<span id="cb4-3"><a href=""></a>plot_histogram(contagem)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="img/count_had.png" class="quarto-figure quarto-figure-center" width="470"></p>
@@ -708,9 +673,9 @@ Profª: Dra. Rosiane de Freitas Rodrigues<br><a href="rosiane@icomp.ufam.edu.br"
 </div>
 </div>
 <div id="tabset-2-2">
-<div class="sourceCode" id="cb6" style="font-size:35px;"><pre class="sourceCode numberSource python code-overflow-wrap number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href=""></a><span class="im">from</span> qiskit.tools.visualization <span class="im">import</span> plot_distribution</span>
-<span id="cb6-2"><a href=""></a>contagem<span class="op">=</span>resultado.get_counts(qc)</span>
-<span id="cb6-3"><a href=""></a>plot_distribution(contagem)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb5" style="font-size:35px;"><pre class="sourceCode numberSource python code-overflow-wrap number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href=""></a><span class="im">from</span> qiskit.tools.visualization <span class="im">import</span> plot_distribution</span>
+<span id="cb5-2"><a href=""></a>contagem<span class="op">=</span>resultado.get_counts(qc)</span>
+<span id="cb5-3"><a href=""></a>plot_distribution(contagem)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="img/prob_had.png" class="quarto-figure quarto-figure-center" width="470"></p>
@@ -721,12 +686,12 @@ Profª: Dra. Rosiane de Freitas Rodrigues<br><a href="rosiane@icomp.ufam.edu.br"
 </div>
 </div>
 <div id="tabset-3-2">
-<div class="sourceCode" id="cb7" style="font-size:35px;"><pre class="sourceCode numberSource python code-overflow-wrap number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href=""></a><span class="im">from</span> qiskit.visualization <span class="im">import</span> plot_state_city, plot_bloch_multivector</span>
-<span id="cb7-2"><a href=""></a></span>
-<span id="cb7-3"><a href=""></a><span class="im">from</span> qiskit.quantum_info <span class="im">import</span> Statevector</span>
-<span id="cb7-4"><a href=""></a>psi<span class="op">=</span>Statevector(qc)</span>
-<span id="cb7-5"><a href=""></a></span>
-<span id="cb7-6"><a href=""></a>plot_bloch_multivector(psi)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb6" style="font-size:35px;"><pre class="sourceCode numberSource python code-overflow-wrap number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href=""></a><span class="im">from</span> qiskit.visualization <span class="im">import</span> plot_state_city, plot_bloch_multivector</span>
+<span id="cb6-2"><a href=""></a></span>
+<span id="cb6-3"><a href=""></a><span class="im">from</span> qiskit.quantum_info <span class="im">import</span> Statevector</span>
+<span id="cb6-4"><a href=""></a>psi<span class="op">=</span>Statevector(qc)</span>
+<span id="cb6-5"><a href=""></a></span>
+<span id="cb6-6"><a href=""></a>plot_bloch_multivector(psi)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="img/bloch_hada.png" class="quarto-figure quarto-figure-center" width="470"></p>
@@ -740,28 +705,65 @@ Profª: Dra. Rosiane de Freitas Rodrigues<br><a href="rosiane@icomp.ufam.edu.br"
 </section>
 <section id="exemplo-emaranhamento---estados-de-bell" class="slide level2">
 <h2>Exemplo: Emaranhamento - Estados de Bell</h2>
+<h3 id="abordagem-algébrica-1">Abordagem Algébrica</h3>
+<ul>
+<li>Para <span class="math inline">\(x,y \in \{0,1\}\)</span></li>
+</ul>
+<table>
+<colgroup>
+<col style="width: 56%">
+<col style="width: 43%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Entrada</th>
+<th style="text-align: center;">Saída</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(|xy\rangle\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\scriptsize |\beta_{xy}\rangle=\dfrac{|0y\rangle+(-1)^{x}|1\bar{y}\rangle}{\sqrt{2}}\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Para emaranhar estados utiliza-se a porta CNOT. Assim, para entrada <span class="math inline">\(|00\rangle=|0\rangle\otimes|0\rangle\)</span>, o primeiro qubit será o de controle. Para ativar a porta X devemos aplicar a porta H no primeiro qubit,</li>
+</ul>
+<p><span class="math display">\[\scriptsize H|00\rangle=\dfrac{1}{\sqrt{2}}\begin{pmatrix}1\\1\end{pmatrix}\otimes\begin{pmatrix}1\\0\end{pmatrix}=\dfrac{1}{\sqrt{2}}\begin{pmatrix}1(1)\\1(0)\\1(1)\\1(0)\end{pmatrix}=\dfrac{1}{\sqrt{2}}\begin{pmatrix}1\\0\\1\\0\end{pmatrix}\]</span></p>
+<ul>
+<li>Aplicando a porta CNOT</li>
+</ul>
+<p><span class="math display">\[\scriptsize |\beta_{00}\rangle=CNOT(H|00\rangle)=\begin{pmatrix}1 &amp; 0 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 0 &amp; 1 \\ 0 &amp; 0 &amp; 1 &amp; 0 \end{pmatrix}\dfrac{1}{\sqrt{2}}\begin{pmatrix}1\\0\\1\\0\end{pmatrix} =\dfrac{1}{\sqrt{2}}\left[\begin{pmatrix}1\\0\\0\\0\end{pmatrix}+\begin{pmatrix}0\\0\\0\\1\end{pmatrix}\right]\rightarrow\boxed{|\beta_{00}\rangle=\dfrac{1}{\sqrt{2}}(|00\rangle+|11\rangle)}\]</span></p>
+</section>
+<section id="exemplo-emaranhamento---estados-de-bell-1" class="slide level2">
+<h2>Exemplo: Emaranhamento - Estados de Bell</h2>
 <h3 id="implementação-1">Implementação</h3>
 <div class="columns">
 <div class="column" style="width:50%;">
-<div class="sourceCode" id="cb8" style="font-size:35px;"><pre class="sourceCode numberSource python code-overflow-wrap number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href=""></a><span class="im">from</span> qiskit <span class="im">import</span> <span class="op">*</span></span>
-<span id="cb8-2"><a href=""></a><span class="im">from</span> qiskit.visualization <span class="im">import</span> plot_histogram, plot_distribution</span>
-<span id="cb8-3"><a href=""></a><span class="co"># circuito somente com as protas quanticas</span></span>
-<span id="cb8-4"><a href=""></a>circuito1 <span class="op">=</span> QuantumCircuit(<span class="dv">2</span>, <span class="dv">2</span>)</span>
-<span id="cb8-5"><a href=""></a>circuito1.h(<span class="dv">0</span>)</span>
-<span id="cb8-6"><a href=""></a>circuito1.cx(<span class="dv">0</span>, <span class="dv">1</span>)</span>
-<span id="cb8-7"><a href=""></a></span>
-<span id="cb8-8"><a href=""></a><span class="co"># circuto somente com as medicoes</span></span>
-<span id="cb8-9"><a href=""></a>medicoes <span class="op">=</span> QuantumCircuit(<span class="dv">2</span>, <span class="dv">2</span>)</span>
-<span id="cb8-10"><a href=""></a>medicoes.measure([<span class="dv">0</span>,<span class="dv">1</span>], [<span class="dv">0</span>,<span class="dv">1</span>]) <span class="co"># pode-se usar measure(range(2),range(2))</span></span>
-<span id="cb8-11"><a href=""></a></span>
-<span id="cb8-12"><a href=""></a>simulador <span class="op">=</span> BasicAer.get_backend(<span class="st">'qasm_simulator'</span>) <span class="co"># executa o simulador</span></span>
-<span id="cb8-13"><a href=""></a>circuito_completo <span class="op">=</span> circuito1.compose(medicoes)</span>
-<span id="cb8-14"><a href=""></a>result <span class="op">=</span> simulador.run(circuito_completo, shots<span class="op">=</span><span class="dv">1000</span>).result()</span>
-<span id="cb8-15"><a href=""></a>counts  <span class="op">=</span> result.get_counts(circuito_completo)</span>
-<span id="cb8-16"><a href=""></a></span>
-<span id="cb8-17"><a href=""></a><span class="co"># Executo pela segunda vez medindo 1024 vezes</span></span>
-<span id="cb8-18"><a href=""></a>second_result <span class="op">=</span> simulador.run(circuito_completo, shots<span class="op">=</span><span class="dv">1024</span>).result()</span>
-<span id="cb8-19"><a href=""></a>second_counts  <span class="op">=</span> second_result.get_counts(circuito_completo)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb7" style="font-size:35px;"><pre class="sourceCode numberSource python code-overflow-wrap number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href=""></a><span class="im">from</span> qiskit <span class="im">import</span> <span class="op">*</span></span>
+<span id="cb7-2"><a href=""></a><span class="im">from</span> qiskit.visualization <span class="im">import</span> plot_histogram, plot_distribution</span>
+<span id="cb7-3"><a href=""></a><span class="co"># circuito somente com as protas quanticas</span></span>
+<span id="cb7-4"><a href=""></a>circuito1 <span class="op">=</span> QuantumCircuit(<span class="dv">2</span>, <span class="dv">2</span>)</span>
+<span id="cb7-5"><a href=""></a>circuito1.h(<span class="dv">0</span>)</span>
+<span id="cb7-6"><a href=""></a>circuito1.cx(<span class="dv">0</span>, <span class="dv">1</span>)</span>
+<span id="cb7-7"><a href=""></a></span>
+<span id="cb7-8"><a href=""></a><span class="co"># circuto somente com as medicoes</span></span>
+<span id="cb7-9"><a href=""></a>medicoes <span class="op">=</span> QuantumCircuit(<span class="dv">2</span>, <span class="dv">2</span>)</span>
+<span id="cb7-10"><a href=""></a>medicoes.measure([<span class="dv">0</span>,<span class="dv">1</span>], [<span class="dv">0</span>,<span class="dv">1</span>]) <span class="co"># pode-se usar measure(range(2),range(2))</span></span>
+<span id="cb7-11"><a href=""></a></span>
+<span id="cb7-12"><a href=""></a>simulador <span class="op">=</span> BasicAer.get_backend(<span class="st">'qasm_simulator'</span>) <span class="co"># executa o simulador</span></span>
+<span id="cb7-13"><a href=""></a>circuito_completo <span class="op">=</span> circuito1.compose(medicoes)</span>
+<span id="cb7-14"><a href=""></a>result <span class="op">=</span> simulador.run(circuito_completo, shots<span class="op">=</span><span class="dv">1000</span>).result()</span>
+<span id="cb7-15"><a href=""></a>counts  <span class="op">=</span> result.get_counts(circuito_completo)</span>
+<span id="cb7-16"><a href=""></a></span>
+<span id="cb7-17"><a href=""></a><span class="co"># Executo pela segunda vez medindo 1024 vezes</span></span>
+<span id="cb7-18"><a href=""></a>second_result <span class="op">=</span> simulador.run(circuito_completo, shots<span class="op">=</span><span class="dv">1024</span>).result()</span>
+<span id="cb7-19"><a href=""></a>second_counts  <span class="op">=</span> second_result.get_counts(circuito_completo)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="img/bell00.png" class="quarto-figure quarto-figure-center" width="400"></p>
@@ -776,8 +778,8 @@ Profª: Dra. Rosiane de Freitas Rodrigues<br><a href="rosiane@icomp.ufam.edu.br"
 <ul id="tabset-4" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-4-1">Contagens</a></li><li><a href="#tabset-4-2">Probabilidade</a></li></ul>
 <div class="tab-content">
 <div id="tabset-4-1">
-<div class="sourceCode" id="cb9" style="font-size:30px;"><pre class="sourceCode numberSource python code-overflow-wrap number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href=""></a>legend <span class="op">=</span> [<span class="st">'Primeira Execucao'</span>, <span class="st">'Segunda Execucao'</span>]</span>
-<span id="cb9-2"><a href=""></a>plot_histogram([counts, second_counts], legend<span class="op">=</span>legend)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb8" style="font-size:30px;"><pre class="sourceCode numberSource python code-overflow-wrap number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href=""></a>legend <span class="op">=</span> [<span class="st">'Primeira Execucao'</span>, <span class="st">'Segunda Execucao'</span>]</span>
+<span id="cb8-2"><a href=""></a>plot_histogram([counts, second_counts], legend<span class="op">=</span>legend)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="img/grafico_contagens.png" class="quarto-figure quarto-figure-center" width="600"></p>
@@ -785,8 +787,8 @@ Profª: Dra. Rosiane de Freitas Rodrigues<br><a href="rosiane@icomp.ufam.edu.br"
 </div>
 </div>
 <div id="tabset-4-2">
-<div class="sourceCode" id="cb10" style="font-size:30px;"><pre class="sourceCode numberSource python code-overflow-wrap number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href=""></a>legend <span class="op">=</span> [<span class="st">'Primeira Execucao'</span>, <span class="st">'Segunda Execucao'</span>]</span>
-<span id="cb10-2"><a href=""></a>plot_distribution([counts, second_counts], legend<span class="op">=</span>legend)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb9" style="font-size:30px;"><pre class="sourceCode numberSource python code-overflow-wrap number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href=""></a>legend <span class="op">=</span> [<span class="st">'Primeira Execucao'</span>, <span class="st">'Segunda Execucao'</span>]</span>
+<span id="cb9-2"><a href=""></a>plot_distribution([counts, second_counts], legend<span class="op">=</span>legend)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="img/grafico_prob.png" class="quarto-figure quarto-figure-center" width="600"></p>
@@ -797,51 +799,18 @@ Profª: Dra. Rosiane de Freitas Rodrigues<br><a href="rosiane@icomp.ufam.edu.br"
 </div>
 </div>
 <div id="tabset-5-2">
-
+<div class="sourceCode" id="cb10" style="font-size:30px;"><pre class="sourceCode numberSource python code-overflow-wrap number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href=""></a><span class="im">from</span> qiskit.quantum_info <span class="im">import</span> Statevector</span>
+<span id="cb10-2"><a href=""></a><span class="im">from</span> qiskit.visualization <span class="im">import</span> plot_state_qsphere</span>
+<span id="cb10-3"><a href=""></a></span>
+<span id="cb10-4"><a href=""></a>state <span class="op">=</span> Statevector(circuito1)</span>
+<span id="cb10-5"><a href=""></a>plot_state_qsphere(state)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/bloch_bell.png" class="quarto-figure quarto-figure-center" width="500"></p>
+</figure>
 </div>
 </div>
 </div>
-</div>
-</div>
-</section>
-<section id="exemplo-estados-de-bell" class="slide level2">
-<h2>Exemplo: Estados de Bell</h2>
-<div class="columns">
-<div class="column" data-with="50%">
-<h3 id="forma-geral">Forma Geral</h3>
-<p><span class="math display">\[|\beta_{xy}\rangle=\dfrac{|0y\rangle+(-1)^{x}|1\bar{y}\rangle}{\sqrt{2}}\]</span></p>
-</div><div class="column" data-with="50%">
-<div style="font-size:30px; text-align:center;">
-<table>
-<colgroup>
-<col style="width: 56%">
-<col style="width: 43%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: center;">Entrada</th>
-<th style="text-align: center;">Saída</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;"><span class="math display">\[|00\rangle\]</span></td>
-<td style="text-align: center;"><span class="math display">\[|\beta_{00}\rangle=\dfrac{|00\rangle+|11\rangle}{\sqrt{2}}\]</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><span class="math display">\[|01\rangle\]</span></td>
-<td style="text-align: center;"><span class="math display">\[|\beta_{01}\rangle=\dfrac{|01\rangle+|10\rangle}{\sqrt{2}}\]</span></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><span class="math display">\[|10\rangle\]</span></td>
-<td style="text-align: center;"><span class="math display">\[|\beta_{10}\rangle=\dfrac{|00\rangle-|11\rangle}{\sqrt{2}}\]</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><span class="math display">\[|11\rangle\]</span></td>
-<td style="text-align: center;"><span class="math display">\[|\beta_{11}\rangle=\dfrac{|01\rangle-|10\rangle}{\sqrt{2}}\]</span></td>
-</tr>
-</tbody>
-</table>
 </div>
 </div>
 </div>
