@@ -107,6 +107,14 @@ format:
 
 ## Hardware Quânticos
 
+## Tecnologias Quânticas no Brasil
+
+- O Banco Itaú ([2019](http://broadcast.com.br/cadernos/financeiro/?id=QnFmNzEraXBGSVVlL1BvYWJkK0ZTdz09)) fecha parceria com a empresa  QC Ware, que oferece  sofware e serviços quânticos, para prever saída de clientes do Banco. Em ([2023](https://bluestudio.estadao.com.br/noticias/mercado/itau-quer-usar-computacao-quantica-para-fidelizar-clientes-e-sugerir-investimentos/)), entra na  IBM Quantum Network.
+
+
+- O Banco Bradesco ([2023](https://itforum.com.br/noticias/bradesco-ibm-criptografia-quantica/)) amplia sua parceiria com a IBM e começa a explorar a criptografia quânica. Além disso, começa ingressar na IBM Quantum Network.
+
+- SENAI CIMATEC e Atos (Eviden) ([2021](https://www.senaicimatec.com.br/noticias/senai-cimatec-e-atos-lancam-o-primeiro-centro-de-computacao-quantica-no-brasil/)) inauguram o primeiro centro de pesquisa em computação quântica, o Latin America Quantum Computer Center (LAQCC), localizado em Salvador, Bahia. Além disso, é lançado o simulador quântico CIMATEC KUATOMU.
 
 
 ## Fundamentos da Mecânica Quântica
