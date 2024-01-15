@@ -105,17 +105,28 @@ format:
 ![IBM Condor e Heron](img/ibm_condor_heron.webp){width="350px" fig-align="center"}
 :::
 
-## Hardware Quânticos
+## Computadores Quânticos^[<https://thequantuminsider.com/2023/12/29/quantum-computing-companies/#The_Corporate_Giants_in_Quantum_Computing>] ^[Cheng, B., Deng, XH., Gu, X. et al. [Noisy intermediate-scale quantum computers](https://doi.org/10.1007/s11467-022-1249-z). Front. Phys. 18, 21308 (2023). ]
 
-## Tecnologias Quânticas no Brasil
+![](img/Tipos%20de%20Qubits.svg){height=700px fig-align="center"}
+
+
+## Mercado no Brasil
 
 - O Banco Itaú ([2019](http://broadcast.com.br/cadernos/financeiro/?id=QnFmNzEraXBGSVVlL1BvYWJkK0ZTdz09)) fecha parceria com a empresa  QC Ware, que oferece  sofware e serviços quânticos, para prever saída de clientes do Banco. Em ([2023](https://bluestudio.estadao.com.br/noticias/mercado/itau-quer-usar-computacao-quantica-para-fidelizar-clientes-e-sugerir-investimentos/)), entra na  IBM Quantum Network.
 
 
-- O Banco Bradesco ([2023](https://itforum.com.br/noticias/bradesco-ibm-criptografia-quantica/)) amplia sua parceiria com a IBM e começa a explorar a criptografia quânica. Além disso, começa ingressar na IBM Quantum Network.
+- O Banco Bradesco ([2023](https://itforum.com.br/noticias/bradesco-ibm-criptografia-quantica/)) amplia sua parceiria com a IBM e começa a explorar a criptografia quânica. Além disso, começa ingressar na IBM Quantum Network
 
 - SENAI CIMATEC e Atos (Eviden) ([2021](https://www.senaicimatec.com.br/noticias/senai-cimatec-e-atos-lancam-o-primeiro-centro-de-computacao-quantica-no-brasil/)) inauguram o primeiro centro de pesquisa em computação quântica, o Latin America Quantum Computer Center (LAQCC), localizado em Salvador, Bahia. Além disso, é lançado o simulador quântico CIMATEC KUATOMU.
 
+:::{layout-ncol=3}
+![](img/itau.jpeg){width="550px" fig-align=center}
+
+
+![](img/bradesco.jpg){width="550px" fig-align=center}
+
+![](img/cimatec.jpeg){width="450px" fig-align=center}
+:::
 
 ## Fundamentos da Mecânica Quântica
 ![](img/Fudanmentos_QM.svg){width="700px" fig-align=center}
