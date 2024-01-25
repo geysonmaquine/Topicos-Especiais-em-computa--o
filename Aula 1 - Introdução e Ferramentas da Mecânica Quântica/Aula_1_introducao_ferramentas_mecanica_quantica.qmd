@@ -105,7 +105,9 @@ format:
 ![IBM Condor e Heron](img/ibm_condor_heron.webp){width="350px" fig-align="center"}
 :::
 
-## Computadores Quânticos: Aplicações
+## Computadores Quânticos: Aplicações^[<https://thequantuminsider.com/2023/05/24/quantum-computing-applications/>] ^[Preskill, J. [Quantum Computing in the NISQ Era and Beyond](https://doi.org/10.22331/q-2018-08-06-79). Quantum 2018, 2, 79.]
+
+![](img/QC_Aplica%C3%A7%C3%B5es.svg){height="650px" fig-align="center"}
 
 
 ## Computadores Quânticos: Tipos de Qubits^[<https://thequantuminsider.com/2023/12/29/quantum-computing-companies/>] ^[Cheng, B., Deng, XH., Gu, X. et al. [Noisy intermediate-scale quantum computers](https://doi.org/10.1007/s11467-022-1249-z). Front. Phys. 18, 21308 (2023). ]
