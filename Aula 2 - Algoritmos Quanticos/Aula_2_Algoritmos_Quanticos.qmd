@@ -1,0 +1,36 @@
+---
+title: Algoritmos Quânticos []{.universidade} []{.programa}
+subtitle: "**Disciplina:** Tópicos Especiais em Computação II"
+institute:
+    - Universidade Federal do Amazonas
+    - Pró-Reitoria de Pesquisa e Pós-Graduação
+    - Programa de Pós-Graduação em Informática
+
+author:
+    - "Profª: Dra. Rosiane de Freitas Rodrigues<br>[(rosiane@icomp.ufam.edu.br)](rosiane@icomp.ufam.edu.br)<br><br> Estágio em Docência II: Geyson Maquiné Batalha<br> [(geyson.batalha@icomp.ufam.edu.br)](geyson.batalha@icomp.ufam.edu.br)"
+
+bibliography: ref.bib
+csl: abnt.csl
+format: 
+    revealjs:
+        slide-number: c/t
+        theme: [tema.scss]
+        width: 1600
+        height: 900
+        fig-cap-location: top
+        code-fold: true
+        margin: 0
+---
+
+## Computação Serial X Computação Paralela X Computação Quântica
+
+|Tipo| Exemplo|Características|
+|:---:|:---:|---|
+|Serial|||
+
+|Serial|![](img/comp_paralela.png){fig-align="center" width=500px} || 
+|Serial|![](img/comp_paralela.png){fig-align="center" width=500px} || 
+
+
+
+## Paralelismo Quântico
