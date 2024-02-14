@@ -4,4 +4,4 @@
 
 ## Aula 2 - Algoritmos Quânticos
 
--[Slides - Aula 2](https://raw.githack.com/geysonmaquine/topicos_especiais_computacao/main/Aula%202%20-%20Algoritmos%20Quanticos/Aula_2_Algoritmos_Quanticos.html#/title-slide)
+- [Slides - Aula 2](https://raw.githack.com/geysonmaquine/topicos_especiais_computacao/main/Aula%202%20-%20Algoritmos%20Quanticos/Aula_2_Algoritmos_Quanticos.html#/title-slide)
