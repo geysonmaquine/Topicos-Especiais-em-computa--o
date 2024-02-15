@@ -24,13 +24,21 @@ format:
 
 ## Computação Serial X Computação Paralela X Computação Quântica
 
-|Tipo| Exemplo|Características|
-|:---:|:---:|---|
-|Serial|||
+### Exemplo: Encontrar, dentre as 8 chaves, a chave que abra a fechadura
 
-|Serial|![](img/comp_paralela.png){fig-align="center" width=500px} || 
-|Serial|![](img/comp_paralela.png){fig-align="center" width=500px} || 
+- Computação Serial 
+
+![](img/serial.png){fig-align="center"}
+
+- Computação Paralela
+
+![](img/quntica.png){fig-align="center"}
+
+- Computação Quântica
+
+![](img/paralela.png){fig-align="center"}
 
 
 
-## Paralelismo Quântico
+
+## Modelo de Consulta e Paralelismo Quântico
