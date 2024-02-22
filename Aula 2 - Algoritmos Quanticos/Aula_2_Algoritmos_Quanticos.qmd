@@ -41,4 +41,25 @@ format:
 
 
 
+<<<<<<< HEAD
 ## Modelo de Consulta e Paralelismo Quântico
+=======
+## Estrutura dos Algoritmos Quânticos
+![](img/modelo_algoritmo_quantico.jpg){height=300px fig-align="center"}
+
+:::{style="font-size:22px"}
+**Entradas:**
+
+**Entradas Ancilla:** Contém qubits ancilla são qubits adicionais que podem ser usados ​​para auxiliar na computação. Eles podem ser usados ​​para armazenar dados intermediários ou para realizar operações quânticas específicas.
+
+**Saídas:**
+
+**Saídas Lixo:** se refere a qubits que não são mais necessários para a computação e podem ser descartados.
+
+**Preparações dos Estados:**  envolve a inicialização dos qubits do computador quântico em um estado específico. Na computação quântica, os qubits podem estar em superposição de estados, o que significa que eles podem representar múltiplos valores simultaneamente. A preparação do estado define a superposição inicial dos qubits para a computação
+
+**Transformações:**  os qubits são manipulados por meio de operações quânticas específicas. Essas operações são análogas às operações matemáticas realizadas em bits em computadores clássicos, mas exploram as propriedades sds quânticas da matéria, como superposição e entrelaçamento, para realizar cálculos mais complexos. 
+:::
+
+
+>>>>>>> 224af1a (dsds)
