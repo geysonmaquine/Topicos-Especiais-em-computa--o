@@ -56,7 +56,7 @@ format:
 
 - David @deutsch1985 apresenta a ideia de um computador quântico universal, que seria capaz de simular qualquer processo físico, incluindo quântico e clássico.
 
- - David Deutsch e Richard Jozsa  [-@jozsa1992]  apresentaram o primeiro algoritmo quântico exponencialmente mais rápido que seu análogo clássico. c
+ - David Deutsch e Richard Jozsa  [-@jozsa1992]  apresentaram o primeiro algoritmo quântico exponencialmente mais rápido que seu análogo clássico. 
 
  - Peter Shor [-@Shor] apresentou um algoritmo quântico capaz de fatorar um número com muitos dígitos rapidamente.
 
